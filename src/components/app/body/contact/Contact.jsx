@@ -6,7 +6,7 @@ import "./contact.scss"
 
 export default function Contact(){
     return (
-        <div className="contacts">
+        <div className="contact">
             <p>Contact Page</p>
         </div>
     );
