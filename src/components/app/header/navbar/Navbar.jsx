@@ -16,13 +16,14 @@ export default function Navbar(props) {
     const [value, setValue] = React.useState(0);
 
     const handleChange = (event, value) => {
-
+        setValue(value);
     }
 
         return (
             <div className="navbar">
                  <AppBar className="nabvar-appbar" color="seconday">
                     <Tabs
+                        value={value}
                         onChange={handleChange}
                         centered
                     >
