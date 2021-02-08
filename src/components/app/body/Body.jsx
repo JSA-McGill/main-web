@@ -16,23 +16,21 @@ import "./body.scss"
 
 export default function Body (){
     return (
-        <Router>
-            <div className="body">
-                <Switch>
-                    <Route exact path="/">
-                        <Landing/>
-                    </Route>
+        <div className="body">
+            <Switch>
+                <Route exact path="/">
+                    <Landing/>
+                </Route>
 
-                    <Route exact path="/events">
-                        <Events/>
-                    </Route>
+                <Route exact path="/events">
+                    <Events/>
+                </Route>
 
-                    <Route exact path="/about">
-                        <About/>
-                    </Route>
-                </Switch>
-            </div>
-        </Router>
+                <Route exact path="/about">
+                    <About/>
+                </Route>
+            </Switch>
+        </div>
     );
 }
 
