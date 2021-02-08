@@ -5,13 +5,13 @@ import Events from './events/Events';
 import Landing from './landing/Landing';
 import "./body.scss"
 
+//  React Router
+
 export default function Body (){
     return (
         <div className="body">
             <body>
-                <Landing/>
                 <About/>
-                <Events/>
             </body>
         </div>
     );
