@@ -26,16 +26,16 @@ export default function Navbar(props) {
 
         return (
             <div className="navbar">
-                <AppBar className="nabvar-appbar">
+                <AppBar className="nabvar-appbar" color="white">
                     <Tabs
+                        value={value}
                         onChange={handleChange}
-                        centered
                     >   
                         <Tab label="Home" component={Link} to="/"/>
                         <Tab label="About" component={Link} to="/about"/>
                         <Tab label="Events" component={Link} to="/events"/>
-                        <Tab label="Execs" component={Link} to="/events"/>
-                        <Tab label="Contact" component={Link} to="/events"/>
+                        <Tab label="Execs" component={Link} to="/execs"/>
+                        <Tab label="Contact" component={Link} to="/contact"/>
                     </Tabs>
                 </AppBar>
             </div>

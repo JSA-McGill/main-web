@@ -7,6 +7,8 @@ import {
     Link
 } from 'react-router-dom'
 
+import Execs from "./execs/Execs";
+import Contact from "./contact/Contact";
 import About from './about/About';
 import Events from './events/Events';
 import Landing from './landing/Landing';
@@ -28,6 +30,14 @@ export default function Body (){
 
                 <Route exact path="/about">
                     <About/>
+                </Route>
+                
+                <Route exact path="/execs">
+                    <Execs/>
+                </Route>
+                
+                <Route exact path="/contact">
+                    <Contact/>
                 </Route>
             </Switch>
         </div>
