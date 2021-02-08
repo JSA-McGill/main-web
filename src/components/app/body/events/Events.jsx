@@ -6,7 +6,7 @@ export default function Events() {
 
     return (
         <div className="events">
-            
+            <p>Event Page</p>
         </div>
     );
 }

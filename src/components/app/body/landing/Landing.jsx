@@ -8,7 +8,12 @@ export default function Landing() {
         <div>
             <div container spacing={0} className="landing">
                 <div className="landing--text">
-                    We're JSA! 
+                    <p>JSA Landing Page</p>
+                    <p>JSA Landing Page</p>
+                    <p>JSA Landing Page</p>
+                    <p>JSA Landing Page</p>
+                    <p>JSA Landing Page</p>
+                    <p>JSA Landing Page</p>
                 </div>
             </div>
         </div>

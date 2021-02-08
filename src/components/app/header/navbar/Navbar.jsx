@@ -2,8 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {
     BrowserRouter as Router,
-    Switch,
-    Route,
     Link
 } from 'react-router-dom'
 
@@ -27,22 +25,20 @@ export default function Navbar(props) {
     }
 
         return (
-            <Router>
-                <div className="navbar">
-                    <AppBar className="nabvar-appbar">
-                        <Tabs
-                            onChange={handleChange}
-                            centered
-                        >   
-                            <Tab label="Home" component={Link} to="/"/>
-                            <Tab label="About" component={Link} to="/about"/>
-                            <Tab label="Events" component={Link} to="/events"/>
-                            <Tab label="Execs" component={Link}/>
-                            <Tab label="Contact" component={Link}/>
-                        </Tabs>
-                    </AppBar>
-                </div>
-            </Router>
+            <div className="navbar">
+                <AppBar className="nabvar-appbar">
+                    <Tabs
+                        onChange={handleChange}
+                        centered
+                    >   
+                        <Tab label="Home" component={Link} to="/"/>
+                        <Tab label="About" component={Link} to="/about"/>
+                        <Tab label="Events" component={Link} to="/events"/>
+                        <Tab label="Execs" component={Link} to="/events"/>
+                        <Tab label="Contact" component={Link} to="/events"/>
+                    </Tabs>
+                </AppBar>
+            </div>
         );
 };
 
