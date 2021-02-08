@@ -29,6 +29,7 @@ export default function Navbar(props) {
                     >
                         <Tab label="About" />
                         <Tab label="Events" />
+                        <Tab label="Blog" />
                         <Tab label="Execs" />
                         <Tab label="Contact" />
                     </Tabs>
