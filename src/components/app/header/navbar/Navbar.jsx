@@ -25,28 +25,36 @@ export default function Navbar(props) {
         setValue(value);
     }
 
-        return (
-            <div className="navbar">
-                <AppBar className="nabvar--appbar" color="white">
-                    <Tabs
-                        textColor="secondary"
-                        value={value}
-                        onChange={handleChange}
-                    >   
-                        <Tab disabled component={() => (
-                            <div className="navbar--appbar--container-logo">
-                                <img className="navbar--appbar--logo" alt="Logo" src={logo} />
-                            </div>
-                        )}/>
-                        <Tab disableRipple label="Home" component={Link} to="/"/>
-                        <Tab disableRipple label="About" component={Link} to="/about"/>
-                        <Tab disableRipple label="Events" component={Link} to="/events"/>
-                        <Tab disableRipple label="Execs" component={Link} to="/execs"/>
-                        <Tab disableRipple label="Contact" component={Link} to="/contact"/>
-                    </Tabs>
-                </AppBar>
-            </div>
-        );
+    const handleFontChange = (value, text) => {
+        if (value === true) {
+            return (<div classes="navbar_tab--on">{text}</div>);
+        } else {
+            return (<div classes="navbar_tab">{text}</div>);
+        }
+    }
+    
+    return (
+        <div className="navbar">
+            <AppBar className="navbar--appbar" color="white">
+                <Tabs
+                    textColor="secondary"
+                    value={value}
+                    onChange={handleChange}
+                >   
+                    <Tab disabled component={() => (
+                        <div className="navbar_appbar_container_logo">
+                            <img className="navbar_appbar_logo" alt="Logo" src={logo} />
+                        </div>
+                    )}/>
+                    <Tab disableRipple label={handleFontChange(value === 1, "Home")} component={Link} to="/"/>
+                    <Tab  disableRipple label={handleFontChange(value === 2, "About")} component={Link} to="/about"/>
+                    <Tab  disableRipple label={handleFontChange(value === 3, "Events")} component={Link} to="/events"/>
+                    <Tab  disableRipple label={handleFontChange(value === 4, "Blog")} component={Link} to="/blog"/>
+                    <Tab  disableRipple label={handleFontChange(value === 5, "Contact")} component={Link} to="/contact"/>
+                </Tabs>
+            </AppBar>
+        </div>
+    );
 };
 
 

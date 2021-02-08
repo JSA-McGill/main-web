@@ -16,10 +16,19 @@
     }
 }
 
-.navbar--appbar--logo {
+.navbar_tab {
+    color: white;
+
+  &--on {
+      color: black;
+  }  
+}
+
+.navbar_appbar_logo {
     width: 45px;
 }
 
-.navbar--appbar--container-logo {
+.navbar_appbar_container_logo {
     margin: 4px;
 }
+

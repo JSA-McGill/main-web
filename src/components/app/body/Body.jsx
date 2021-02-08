@@ -7,7 +7,7 @@ import {
     Link
 } from 'react-router-dom'
 
-import Execs from "./execs/Execs";
+import Blog from "./blog/Blog";
 import Contact from "./contact/Contact";
 import About from './about/About';
 import Events from './events/Events';
@@ -32,8 +32,8 @@ export default function Body (){
                     <About/>
                 </Route>
                 
-                <Route exact path="/execs">
-                    <Execs/>
+                <Route exact path="/blog">
+                    <Blog/>
                 </Route>
                 
                 <Route exact path="/contact">

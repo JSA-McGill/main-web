@@ -2,12 +2,12 @@ import React from "react";
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/styles';
 
-import "./execs.scss"
+import "./blog.scss"
 
-export default function Execs(){
+export default function Blog(){
     return (
-        <div className="execs">
-            <p>Execs Page</p>
+        <div className="blog">
+            <p>Blog Page</p>
         </div>
     );
 }
