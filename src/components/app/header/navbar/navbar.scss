@@ -1,0 +1,17 @@
+.navbar {
+    width: 100vh;
+    display: flex;
+    flex-direction: row;
+    align-items: left;
+    justify-content: left;
+    font-size: calc(1px + 2vmin);
+    font-family: Raleway, sans-serif;
+    position: fixed;
+    color: white;
+    z-index: 1;
+    transition: top 0.3s;
+}
+
+.navbar--appbar{
+    
+}

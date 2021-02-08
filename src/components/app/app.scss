@@ -1,0 +1,11 @@
+.app {
+    position: static;
+    overflow: auto;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+html {
+    scroll-behavior: smooth;
+}
