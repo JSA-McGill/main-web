@@ -5,6 +5,7 @@ import {
     Link
 } from 'react-router-dom'
 
+import logo from "../../../../assets/images/logo512.png";
 import AppBar from '@material-ui/core/AppBar';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
@@ -18,7 +19,7 @@ import "./navbar.scss"
 
 export default function Navbar(props) {
     const { classes } = props;
-    const [value, setValue] = React.useState(0);
+    const [value, setValue] = React.useState(1);
 
     const handleChange = (event, value) => {
         setValue(value);
@@ -26,16 +27,22 @@ export default function Navbar(props) {
 
         return (
             <div className="navbar">
-                <AppBar className="nabvar-appbar" color="white">
+                <AppBar className="nabvar--appbar" color="white">
                     <Tabs
+                        textColor="secondary"
                         value={value}
                         onChange={handleChange}
                     >   
-                        <Tab label="Home" component={Link} to="/"/>
-                        <Tab label="About" component={Link} to="/about"/>
-                        <Tab label="Events" component={Link} to="/events"/>
-                        <Tab label="Execs" component={Link} to="/execs"/>
-                        <Tab label="Contact" component={Link} to="/contact"/>
+                        <Tab disabled component={() => (
+                            <div className="navbar--appbar--container-logo">
+                                <img className="navbar--appbar--logo" alt="Logo" src={logo} />
+                            </div>
+                        )}/>
+                        <Tab disableRipple label="Home" component={Link} to="/"/>
+                        <Tab disableRipple label="About" component={Link} to="/about"/>
+                        <Tab disableRipple label="Events" component={Link} to="/events"/>
+                        <Tab disableRipple label="Execs" component={Link} to="/execs"/>
+                        <Tab disableRipple label="Contact" component={Link} to="/contact"/>
                     </Tabs>
                 </AppBar>
             </div>

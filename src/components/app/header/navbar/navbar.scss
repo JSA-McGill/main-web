@@ -10,8 +10,16 @@
     color: white;
     z-index: 1;
     transition: top 0.3s;
+    
+    &--appbar{
+    
+    }
 }
 
-.navbar--appbar{
-    
+.navbar--appbar--logo {
+    width: 45px;
+}
+
+.navbar--appbar--container-logo {
+    margin: 4px;
 }
