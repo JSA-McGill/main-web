@@ -1,12 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import About from './about/index';
-import Events from './events/index';
-import Landing from './landing/index';
-
+import About from './about/About';
+import Events from './events/Events';
+import Landing from './landing/Landing';
 import "./body.scss"
 
-const Body = () => {
+export default function Body (){
     return (
         <div className="body">
             <body>
@@ -21,5 +20,3 @@ const Body = () => {
 Body.propTypes = {
     classes: PropTypes.object.isRequired,
 };
-
-export default Body;
