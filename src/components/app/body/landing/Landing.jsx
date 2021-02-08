@@ -1,10 +1,9 @@
 import React from "react";
 import PropTypes from 'prop-types';
-import Display from "./display/index";
 
 import "./landing.scss";
 
-const Landing = () => {
+export default function Landing() {
     return (
         <div>
             <div container spacing={0} className="landing">
@@ -15,5 +14,3 @@ const Landing = () => {
         </div>
     );
 }
-
-export default Landing;
