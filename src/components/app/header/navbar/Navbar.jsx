@@ -1,5 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link
+} from 'react-router-dom'
+
 import AppBar from '@material-ui/core/AppBar';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
@@ -20,21 +27,24 @@ export default function Navbar(props) {
     }
 
         return (
-            <div className="navbar">
-                 <AppBar className="nabvar-appbar" color="seconday">
-                    <Tabs
-                        value={value}
-                        onChange={handleChange}
-                        centered
-                    >
-                        <Tab label="About" />
-                        <Tab label="Events" />
-                        <Tab label="Blog" />
-                        <Tab label="Execs" />
-                        <Tab label="Contact" />
-                    </Tabs>
-                 </AppBar>
-            </div>
+            <Router>
+                <div className="navbar">
+                    <AppBar className="nabvar-appbar" color="seconday">
+                        <Tabs
+                            value={value}
+                            onChange={handleChange}
+                            onChange={handleChange}
+                            centered
+                        >   
+                            <Tab label="Home" component={Link} to="/"/>
+                            <Tab label="About" component={Link} to="/about"/>
+                            <Tab label="Events" component={Link} to="/events"/>
+                            <Tab label="Execs" component={Link}/>
+                            <Tab label="Contact" component={Link}/>
+                        </Tabs>
+                    </AppBar>
+                </div>
+            </Router>
         );
 };
 
