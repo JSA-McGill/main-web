@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 
 import Header from './header/index';
 import Body from './body/index';
+import Footer from './footer/footer'
 
 import "./app.scss"
 
@@ -12,6 +13,7 @@ class App extends React.Component {
             <div className={"app"} >
                 <Header/>
                 <Body/>
+                <Footer/>
             </div>
         );
     }
