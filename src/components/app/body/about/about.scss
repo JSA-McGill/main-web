@@ -1,16 +1,15 @@
 @import 'src/mixins/index';
 
 .about {
-    height: 100vh;
-    width: 100vw;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
+    align-items: start;
+    justify-content: flex-start;
     color: black;
     background-color: white;
-
+    overflow-y: hidden;
+    margin-left: 2vmin;
+    margin-bottom: 2vmin;
     @include medium {
         display: flex;
         flex-direction: column;
@@ -30,4 +29,12 @@
         color: black;
         background-color: white;
     }
+}
+
+.content{
+    text-align: left;
+    font-size: large;
+}
+
+.execs{
 }
