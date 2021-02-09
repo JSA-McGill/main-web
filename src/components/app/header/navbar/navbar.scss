@@ -1,3 +1,4 @@
+// All
 .navbar {
     width: 100vh;
     display: flex;
@@ -10,25 +11,53 @@
     color: white;
     z-index: 1;
     transition: top 0.3s;
-    
-    &--appbar{
-    
-    }
+
+}
+
+.navbar_appbar_logo {
+    height: 40px;
+    width: 40px;
+}
+
+.navbar_appbar_container_logo {
+    text-align: left;
+    flex: 1;
+    margin: 4px;
+}
+
+
+// Small
+.navbar_appbar {
+    display: flex;
+}
+
+.navbar_appbar_menubar {
+    display: flex;
+}
+
+.navbar_appbar_tabs {
+    opacity: 0;
+}
+
+
+// medium + Large
+.navbar_appbar_tabs {
+    text-align: right;
+}
+
+.navbar_appbar_tabs_container {
+    display: flex;
+}
+
+.nav_bar_tabs_divider {
+    flex: 1;
 }
 
 .navbar_tab {
-    color: white;
+    font-size:15px;
+    color:red;
 
   &--on {
       color: black;
   }  
 }
-
-.navbar_appbar_logo {
-    width: 45px;
-}
-
-.navbar_appbar_container_logo {
-    margin: 4px;
-}
-

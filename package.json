@@ -1,16 +1,18 @@
 {
-  "homepage": "http://tamphilip.github.io/profile-website",
-  "name": "profile-website",
+  "homepage": "N/A",
+  "name": "jsa-website",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@material-ui/core": "^4.8.1",
+    "@material-ui/core": "^4.11.3",
+    "@material-ui/icons": "^5.0.0-alpha.24",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
     "node-sass": "^4.13.1",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
+    "react-media": "^2.0.0-rc.1",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.3.0",
     "typeface-roboto": "0.0.75"
