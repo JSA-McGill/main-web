@@ -29,6 +29,17 @@
 // Small
 .navbar_appbar {
     display: flex;
+
+    &--on {
+        transform: translateY(100vh);
+        transition: transform 400ms ease-out;
+    }
+
+    &--off {
+        transform: translateY(0);
+        transition: transform 400ms ease-in;
+
+    }
 }
 
 .navbar_appbar_menubar {
@@ -55,9 +66,12 @@
 
 .navbar_tab {
     font-size:15px;
-    color:red;
 
   &--on {
-      color: black;
+      
   }  
+}
+
+.navbar_appbar_tabs_icon {
+    width: 10px;
 }
