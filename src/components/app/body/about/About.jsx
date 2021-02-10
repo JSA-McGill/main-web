@@ -13,7 +13,7 @@ export default function About(){
             <div className="content">
                 <div>
                     <h1> The Club</h1>
-                    <p> JSA McGill is a rapidly-growing social/cultural organization whose goals are to promote Japanese culture and language in the local community through various events hosted throughout the school year.</p>
+                    <p> The Japanese Student Association (JSA) of McGill is a rapidly-growing social/cultural organization whose goals are to promote Japanese culture and language in the local community through various events hosted throughout the school year.</p>
                     <p> We are a very diverse group of students and although some of our members are indeed Japanese, there are many non-Japanese members as well. Even though we have varying backgrounds, we all have a common interest in Japanese culture! </p> 
 
                     <h2> Our Mission: </h2>
