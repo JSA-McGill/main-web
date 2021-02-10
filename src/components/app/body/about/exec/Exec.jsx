@@ -15,8 +15,6 @@ import './exec.scss';
 
 const useStyles = makeStyles({
     root: {
-      maxWidth: 300,
-      minWidth: 300
     },
     media: {
       height: 140,
@@ -28,7 +26,7 @@ export default function Exec(props) {
     const classes = useStyles();
 
     return (
-        <Grid item xs={2}>
+        <Grid item xs={6} sm={6} md={4} lg={2} xl={1}>
             <Card className={classes.root}>
                 <CardActionArea>
                     <CardMedia

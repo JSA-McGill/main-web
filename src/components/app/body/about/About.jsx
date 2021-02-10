@@ -6,8 +6,16 @@ import Grid from '@material-ui/core/Grid';
 import Exec from './exec/Exec'
 import "./about.scss"
 import execs from "../../../../assets/execs/execs.json"
-  
+
+const useStyles = makeStyles((theme) => ({
+    root: {
+      flexGrow: 1
+    },
+  }));
+
 export default function About(){
+    const classes = useStyles()
+
     return (
         <div className="about">
             <div className="content">
@@ -27,22 +35,24 @@ export default function About(){
                     </ul>
                 </div>
                 <h1> Our Execs </h1>
-                <Grid container className={execs} justify="center" spacing={1} alignItems="center">
-                    {execs.data.map((exec, index) => (
-                        <Exec
-                            key={exec.id}
-                            Image={exec.Image}
-                            FirstName={exec.FirstName}
-                            LastName={exec.LastName}
-                            Title={exec.Title}
-                            Program={exec.Program}
-                            Description={exec.Description}
-                            Linkedin={exec.Linkedin}
-                            Instagram={exec.Instagram}
-                        >
-                        </Exec>
-                    ))}
-                </Grid>
+                <div className={classes.root}>
+                    <Grid container className={execs} justify="center" spacing={1} alignItems="center" wrap>
+                        {execs.data.map((exec, index) => (
+                            <Exec
+                                key={exec.id}
+                                Image={exec.Image}
+                                FirstName={exec.FirstName}
+                                LastName={exec.LastName}
+                                Title={exec.Title}
+                                Program={exec.Program}
+                                Description={exec.Description}
+                                Linkedin={exec.Linkedin}
+                                Instagram={exec.Instagram}
+                            >
+                            </Exec>
+                        ))}
+                    </Grid>
+                </div>
             </div>
         </div>
     );
