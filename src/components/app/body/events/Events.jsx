@@ -44,26 +44,34 @@ export default function Events() {
 
     return (
      
-        <Slide direction="left" timeout={300} in={true}  >
+        
             <div className="events">
-                <h2>
-                    Upcoming Events
-                </h2>
-                <Grid container justify="center"  direction="row" spacing="4">
-                    {events.upcoming.map((event, index) => (
-                        createEvent(event.Title, event.Description, event.Image, event.Facebook)
-                    ))}
-                </Grid>
-                <h2>
-                    Past Events
-                </h2>
+                <Slide direction="left" timeout={300} in={true}  >
+                    <h2>
+                        Upcoming Events
+                    </h2>
+                </Slide> 
+                <Slide direction="left" timeout={500} in={true} >
+                    <Grid container justify="center"  direction="row" spacing="4">
+                        {events.upcoming.map((event, index) => (
+                            createEvent(event.Title, event.Description, event.Image, event.Facebook)
+                        ))}
+                    </Grid>
+                </Slide>
+                <Slide direction="left" timeout={300} in={true}  >
+                    <h2>
+                        Past Events
+                    </h2>
+                </Slide>
+                <Slide direction="left" timeout={500} in={true} >
                 <Grid container justify="center" direction="row" spacing="4">
-                {events.past.map((event, index) => (
-                        createEvent(event.Title, event.Description, event.Image, event.Facebook)
-                    ))}
-                </Grid>
+                    {events.past.map((event, index) => (
+                            createEvent(event.Title, event.Description, event.Image, event.Facebook)
+                        ))}
+                    </Grid>
+                </Slide>
             </div>
-        </Slide>
+        
     );
 }
 

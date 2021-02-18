@@ -23,9 +23,7 @@ import Drawer from '@material-ui/core/Drawer';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
-
-
-import { useScrollPosition } from "../../../../hooks/useScrollPosition"
+import { useLocation } from 'react-router-dom'
 
 export default function Navbar(props) {
 
@@ -68,21 +66,11 @@ export default function Navbar(props) {
 
     const anchor="right"
 
-    // Scroll Position
-
-    // const [sticky, setSticky] = useState(true)
-
-    // useScrollPosition(
-    //     ({ prevPos, currPos }) => {
-    //     const isShow = currPos.y > prevPos.y
-    //     if (isShow !== sticky) setSticky(isShow)
-    //     },
-    //     [sticky]
-    // )
+    const location = useLocation();
 
     return (
         <div className="navbar">
-            <AppBar className={ true ? "navbar_appbar--off" : "navbar_appbar--on" } color="white">
+            <AppBar className={ location.pathname != "/" ? "navbar_appbar--off" : "navbar_appbar--on" } color="white">
                 {showList ? (
                     <div>
                         <div className="navbar_appbar_menubar">

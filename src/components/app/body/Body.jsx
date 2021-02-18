@@ -9,7 +9,6 @@ import Blog from "./blog/Blog";
 import Contact from "./contact/Contact";
 import About from './about/About';
 import Events from './events/Events';
-import Landing from './landing/Landing';
 import "./body.scss"
 
 //  React Router
@@ -18,10 +17,6 @@ export default function Body (){
     return (
         <div className="body">
             <Switch>
-                <Route exact path="/">
-                    <Landing/>
-                </Route>
-
                 <Route exact path="/events">
                     <Events/>
                 </Route>

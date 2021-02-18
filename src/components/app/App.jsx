@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {
     BrowserRouter as Router,
+      Switch,
+      Route,
 } from 'react-router-dom'
 
 import { createMuiTheme } from '@material-ui/core/styles';
@@ -10,7 +12,7 @@ import RED from '@material-ui/core/colors/red';
 
 import Header from './header/Header';
 import Body from './body/Body';
-
+import Landing from './landing/Landing';
 
 import "./app.scss"
 
@@ -36,6 +38,9 @@ export default function App () {
     return (
         <ThemeProvider theme={theme}>
             <Router>
+                <Route exact path="/">
+                    <Landing/>
+                </Route>
                 <div className={"app"} >
                     <Header/>
                     <Body/>

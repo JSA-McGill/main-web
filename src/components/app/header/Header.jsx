@@ -20,13 +20,6 @@ const Header = (props) => {
            <header className ="header">
                 <Navbar/> 
               </header>
-           {/* {hideNavbar ? 
-             null : (
-              <header className ="header">
-                <Navbar/> 
-              </header>
-             )
-           } */}
         </div>  
       );
 }
