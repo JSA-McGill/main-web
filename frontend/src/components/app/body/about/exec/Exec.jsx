@@ -26,7 +26,12 @@ const useStyles = makeStyles(theme => ({
         height: 400
     },
     media: {
-      height: 300
+      height: 300,
+      width: 'auto'
+    },
+    focusedMedia: {
+        height: 200,
+        width: 'auto'
     },
     actionarea: { 
         display: 'block',
@@ -43,9 +48,9 @@ const useStyles = makeStyles(theme => ({
         flex: 1
     },
     textObject: {
-        position: 'absolute',
         display: 'flex',
         alignItems: 'stretch',
+        marginRight: '5px'
     }
   }));
   
@@ -59,13 +64,10 @@ export default function Exec(props) {
         <Grid item xs={8} sm={6} md={4} lg={2} xl={2}>
             <Card className={classes.root} variant="outlined" >
                 <CardActionArea classes={{root: classes.actionarea}} onClick={() => setFocused(!focused)} >
-                    { 
-                    !focused &&
-                        <CardMedia
-                        className={classes.media}
+                    <CardMedia
+                        className={!focused ? classes.media : classes.focusedMedia }
                         image={props.Image}
-                        />
-                    }
+                    />
                     <CardContent classes={{root: classes.content}} >
                         <Typography classes={{root: classes.flexObject}} gutterBottom variant="h5" component="h2" display="inline" style={{fontSize: 20, fontWeight: 'bold'}} >
                             {props.FirstName+" "+props.LastName}  
@@ -82,15 +84,19 @@ export default function Exec(props) {
                                     {props.Program}
                                 </Typography>
 
-                                <Typography classes={{root: classes.flexObject}} gutterBottom variant="body2" color="textSecondary" component="p">
-                                    {props.Description}
+                                <Typography classes={{root: classes.flexObject}} gutterBottom variant="h6" component="h3">
+                                    {props.FavoriteFood}
+                                </Typography>
+
+                                <Typography classes={{root: classes.flexObject}} gutterBottom variant="h6" component="h3">
+                                    {props.Pet}
                                 </Typography>
                                 
                                 <Typography classes={{root: classes.flexObject}} gutterBottom display="inline" component="div">
-                                    <Icon classes={{root : classes.instagramText}}>
+                                    <Icon classes={{root : classes.textObject}}>
                                         <InstagramIcon/>
                                     </Icon>
-                                    <span classes={classes.instagramText}>
+                                    <span classes={classes.textObject}>
                                         {props.Instagram}
                                     </span>
                                 </Typography>
