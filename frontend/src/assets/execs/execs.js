@@ -20,18 +20,18 @@ import zoe from "../images/exec photos/Zoe (VP Media).JPG"
 const execs = {
     "data": [
         {
-            "id": 3,
+            "id": 1,
             "Image": sachie,
             "FirstName": "Sachie",
             "LastName": "Arashida",
             "Title": "President",
             "Program": "Economics & Sociology U3",
-            "Description": "  ",
-            "Linkedin": " ",
+            "FavoriteFood" : "Karaage",
+            "Pet": "Dog",
             "Instagram": "@a.sachiramen"
         },
         {
-            "id": 1,
+            "id": 2,
             "Image": aki,
             "FirstName": "Aki",
             "LastName": "",
@@ -42,7 +42,7 @@ const execs = {
             "Instagram": " "
         },
         {
-            "id": 2,
+            "id": 3,
             "Image": bianca,
             "FirstName": "Bianca",
             "LastName": "",
@@ -53,7 +53,7 @@ const execs = {
             "Instagram": " "
         },
         {
-            "id": 3,
+            "id": 4,
             "Image": cherry,
             "FirstName": "Cherry",
             "LastName": "",
