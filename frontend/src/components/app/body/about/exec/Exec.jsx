@@ -12,12 +12,12 @@ import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import Link from '@material-ui/core/Link';
 import Icon from '@material-ui/core/Icon';
+import Collapse from '@material-ui/core/Collapse';
 
 import Doge from "../../../../../assets/svg/doge.svg";
 import Neko from "../../../../../assets/svg/neko.svg";
 import Shiba from "../../../../../assets/svg/shiba.svg";
 import InstagramIcon from '@material-ui/icons/Instagram';
-import { VerticalAlignCenter } from "@material-ui/icons";
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -27,21 +27,31 @@ const useStyles = makeStyles(theme => ({
     },
     media: {
       height: 300,
-      width: 'auto'
+      width: 'auto',
     },
     focusedMedia: {
-        height: 200,
-        width: 'auto'
+        height: 0,
+        width: 'auto',
+    },
+    image: {
+        height: 300,
+        width: '100%',
+        objectFit: 'cover'
     },
     actionarea: { 
         display: 'block',
         height: '100%',
         width: '100%'
     },
+    imageBlock: {
+        height: 300,
+        width: '100%',
+        backgroundColor: 'black'
+    },
     content: {
         display: 'inline-block',
         height: '100%',
-        flex: 1
+        width: '100%'
     },
     flexObject: {
         display: 'flex',
@@ -65,43 +75,47 @@ export default function Exec(props) {
             <Card className={classes.root} variant="outlined" >
                 <CardActionArea classes={{root: classes.actionarea}} onClick={() => setFocused(!focused)} >
                     <CardMedia
-                        className={!focused ? classes.media : classes.focusedMedia }
+                        classes={{
+                            root: !focused ? classes.media : classes.focusedMedia,
+                            img: classes.image
+                        }}
                         image={props.Image}
-                    />
+                    >
+                    </CardMedia>
                     <CardContent classes={{root: classes.content}} >
-                        <Typography classes={{root: classes.flexObject}} gutterBottom variant="h5" component="h2" display="inline" style={{fontSize: 20, fontWeight: 'bold'}} >
-                            {props.FirstName+" "+props.LastName}  
-                        </Typography>
-                        { !focused ? 
-                            <>
-                                <Typography classes={{root: classes.flexObject}} gutterBottom variant="h6" component="h3">
-                                    {props.Title}
-                                </Typography>
-                            </>
-                            :
-                             <>
-                                <Typography classes={{root: classes.flexObject}} gutterBottom variant="h6" component="h5" style={{fontStyle:"italic"}}>
-                                    {props.Program}
-                                </Typography>
+                            <Typography classes={{root: classes.flexObject}} gutterBottom variant="h5" component="h2" display="inline" style={{fontSize: 20, fontWeight: 'bold'}} >
+                                {props.FirstName+" "+props.LastName}  
+                            </Typography>
+                            { !focused ? 
+                                <>
+                                    <Typography classes={{root: classes.flexObject}} gutterBottom variant="h6" component="h3">
+                                        {props.Title}
+                                    </Typography>
+                                </>
+                                :
+                                <>
+                                    <Typography classes={{root: classes.flexObject}} gutterBottom variant="h6" component="h5" style={{fontStyle:"italic"}}>
+                                        {props.Program}
+                                    </Typography>
 
-                                <Typography classes={{root: classes.flexObject}} gutterBottom variant="h6" component="h3">
-                                    {props.FavoriteFood}
-                                </Typography>
+                                    <Typography classes={{root: classes.flexObject}} gutterBottom variant="h6" component="h3">
+                                        {props.FavoriteFood}
+                                    </Typography>
 
-                                <Typography classes={{root: classes.flexObject}} gutterBottom variant="h6" component="h3">
-                                    {props.Pet}
-                                </Typography>
-                                
-                                <Typography classes={{root: classes.flexObject}} gutterBottom display="inline" component="div">
-                                    <Icon classes={{root : classes.textObject}}>
-                                        <InstagramIcon/>
-                                    </Icon>
-                                    <span classes={classes.textObject}>
-                                        {props.Instagram}
-                                    </span>
-                                </Typography>
-                            </>
-                        }
+                                    <Typography classes={{root: classes.flexObject}} gutterBottom variant="h6" component="h3">
+                                        {props.Pet}
+                                    </Typography>
+                                    
+                                    <Typography classes={{root: classes.flexObject}} gutterBottom display="inline" component="div">
+                                        <Icon classes={{root : classes.textObject}}>
+                                            <InstagramIcon/>
+                                        </Icon>
+                                        <span classes={classes.textObject}>
+                                            {props.Instagram}
+                                        </span>
+                                    </Typography>
+                                </>
+                            }
                     </CardContent>
                 </CardActionArea>
             </Card>
