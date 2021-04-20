@@ -38,7 +38,7 @@ const useStyles = makeStyles((theme) => ({
         width: '50vw',
         margin: theme.spacing(1)
     },
-    submit: {
+    send: {
         width: 200,
         margin: theme.spacing(1)
     }
@@ -51,8 +51,11 @@ export default function GetInvolved(){
         <div className={classes.root} >
             <div className={classes.content}>
                 <div>
+                    <h1> Get Involved </h1> 
+                    <h2> Come to our events!  </h2>
+                </div>
+                <div>
                     <h1>Reach Out to Us!</h1>
-                    
                     <form className={classes.form} noValidate autoComplete="off" action="#">
                         <TextField 
                             classes={{root: classes.email}}
@@ -69,22 +72,23 @@ export default function GetInvolved(){
                             rows={10}
                             rowsMax={10}
                         />
-                        <Button classes={{root: classes.submit}} color="secondary" variant="outlined" raised={false}>
-                            Submit
+                        <Button classes={{root: classes.send}} color="secondary" variant="outlined" raised={false}>
+                            Send
                         </Button>
                     </form>
                 </div>
                 <div>
-                    <a href="https://www.facebook.com/jsa.mcgill" target="_blank">
-                                    <IconButton>
-                                    <FacebookIcon />
-                                    </IconButton>
-                                </a>
-                    <a href="https://www.instagram.com/jsamcgill/?hl=en" target="_blank">
-                            <IconButton>
-                                <InstagramIcon />
-                            </IconButton>
-                    </a>
+                    
+                    <IconButton color="primary">
+                        <a href="https://www.facebook.com/jsa.mcgill" target="_blank">
+                            <FacebookIcon />
+                        </a>
+                    </IconButton>
+                    <IconButton color="primary">
+                        <a href="https://www.instagram.com/jsamcgill/?hl=en" target="_blank">
+                            <InstagramIcon />
+                        </a>
+                    </IconButton>
                 </div>
             </div>
         </div>

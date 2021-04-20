@@ -33,6 +33,8 @@ import "./app.scss"
     palette: {
         primary: {
           main: RED[50],
+          light: RED[700],
+          contrastText: RED[700],
         },
         secondary: {
           main: RED[700],
