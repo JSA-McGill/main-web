@@ -7,7 +7,7 @@ import {
 
 import Landing from './landing/Landing';
 import Blog from "./blog/Blog";
-import Contact from "./contact/Contact";
+import GetInvolved from "./getinvolved/GetInvolved";
 import About from './about/About';
 import Events from './events/Events';
 import Resources from "./resources/Resources";
@@ -37,8 +37,8 @@ export default function Body (){
                     <Blog/>
                 </Route>
                 
-                <Route exact path="/contact">
-                    <Contact/>
+                <Route exact path="/getinvolved">
+                    <GetInvolved/>
                 </Route>
             </Switch>
         </div>
