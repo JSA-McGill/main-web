@@ -10,6 +10,7 @@
     overflow-y: hidden;
     margin-left: 2vmin;
     margin-bottom: 2vmin;
+    
     @include medium {
         display: flex;
         flex-direction: column;

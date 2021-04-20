@@ -17,13 +17,13 @@ import IconButton from '@material-ui/core/IconButton';
 import AppBar from '@material-ui/core/AppBar';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
-import "./navbar.scss"
-
 import Drawer from '@material-ui/core/Drawer';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import { useLocation } from 'react-router-dom'
+
+import "./navbar.scss"
 
 export default function Navbar(props) {
 
@@ -33,7 +33,7 @@ export default function Navbar(props) {
     "Events": "/events",
     "Resources": "/resources",
     "Blog": "/blog",
-    "Contact": "/contact"
+    "Get Involved": "/getinvolved"
     
 };
 
@@ -125,7 +125,7 @@ export default function Navbar(props) {
                             <Tab  disableRipple label={handleFontChange(value === 2, "Events")} component={Link} to="/events"/>
                             <Tab  disableRipple label={handleFontChange(value === 3, "Resources")} component={Link} to="/Resources"/>
                             <Tab  disableRipple label={handleFontChange(value === 4, "Blog")} component={Link} to="/blog"/>
-                            <Tab  disableRipple label={handleFontChange(value === 5, "Contact")} component={Link} to="/contact"/>
+                            <Tab  disableRipple label={handleFontChange(value === 5, "Get Involved")} component={Link} to="/getinvolved"/>
                         </Tabs>
                     </div>
                 )}

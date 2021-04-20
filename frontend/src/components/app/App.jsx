@@ -17,6 +17,13 @@ import Body from './body/Body';
 import "./app.scss"
 
  const theme = createMuiTheme({
+    overrides: {
+      MuiButton: {
+        root: {
+          borderRadius: '5em',
+        }, 
+      }, 
+    }, 
     typography: {
       fontFamily: [
         'M_PLUS_1p',
