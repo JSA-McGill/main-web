@@ -1,12 +1,11 @@
 .app {
     position: static;
-    overflow: auto;
+    overflow: hidden;
     align-items: center;
     justify-content: center;
     text-align: center;
     display: flex;
     flex-direction: column;
-    overflow: hidden;
 }
 
 .content {
