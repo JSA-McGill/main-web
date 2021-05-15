@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState } from "react";
 import PropTypes from 'prop-types';
 import Grid from '@material-ui/core/Grid';
 
@@ -17,6 +17,7 @@ import "./landing.scss";
 import events from "../../../../assets/images/Welcome Party/IMG_0573.JPG"
 import background from "../../../../assets/images/smash_tourny.jpg"
 import fam from "../../../../assets/images/fam.jpg"
+import VizSensor from 'react-visibility-sensor';
 
 import {
     Link
@@ -40,6 +41,9 @@ const useStyles = makeStyles({
 
 export default function Landing() {
     const classes = useStyles();
+
+    let [active, setActive] = useState(false);
+
     return (
         <div>
             <div container className="landing">
@@ -52,9 +56,9 @@ export default function Landing() {
                                 </Fade>
                             </div>
                         </Slide>
-                        <Fade in={true} timeout={1500}> 
+                         <Fade in={true} timeout={1500}> 
                             <h1 className="landing-main-text"> 
-                                Welcome to JSA McGill!  
+                                JSA McGill
                             </h1>
                         </Fade>
                     </div>
@@ -77,20 +81,25 @@ export default function Landing() {
                         </Grid>
                     </div>
                 </Slide>
+                <VizSensor onChange={(isVisible) => {
+                        setActive(isVisible);
+                    }}
+                    >
                 <div className="landing-section">
-                    <Slide direction="left" timeout={1200} in={true}>
-                        <div className="landing-box">
-                            <Fade in={true} timeout={2000}> 
-                                <img className="landing-main-image" src={background}/>    
-                            </Fade>
-                        </div>
-                    </Slide>
-                    <Fade in={true} timeout={1500}> 
-                            <h1 className="landing-main-text"> 
-                            Come join us for some fun!
-                            </h1>
-                    </Fade>
+                        <Slide direction="left" timeout={1200} in={active}>
+                            <div className="landing-box">
+                                <Fade in={active} timeout={2000}> 
+                                    <img className="landing-main-image" src={background}/>    
+                                </Fade>
+                            </div>
+                        </Slide>
+                        <Fade in={active} timeout={1500}> 
+                                <h1 className="landing-main-text"> 
+                                Come join us for some fun!
+                                </h1>
+                        </Fade>
                 </div>
+                </VizSensor>
             </div>
         </div>
     );

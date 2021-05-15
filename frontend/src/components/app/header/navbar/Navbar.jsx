@@ -31,8 +31,8 @@ export default function Navbar(props) {
         "Home": "/", 
     "About":"/about", 
     "Events": "/events",
-    "Resources": "/resources",
-    "Blog": "/blog",
+    // "Resources": "/resources",
+    // "Blog": "/blog",
     "Get Involved": "/getinvolved"
     
 };
@@ -123,8 +123,8 @@ export default function Navbar(props) {
                         >   
                             <Tab  disableRipple label={handleFontChange(value === 1, "About")} component={Link} to="/about"/>
                             <Tab  disableRipple label={handleFontChange(value === 2, "Events")} component={Link} to="/events"/>
-                            <Tab  disableRipple label={handleFontChange(value === 3, "Resources")} component={Link} to="/Resources"/>
-                            <Tab  disableRipple label={handleFontChange(value === 4, "Blog")} component={Link} to="/blog"/>
+                            {/* <Tab  disableRipple label={handleFontChange(value === 3, "Resources")} component={Link} to="/Resources"/>
+                            <Tab  disableRipple label={handleFontChange(value === 4, "Blog")} component={Link} to="/blog"/> */}
                             <Tab  disableRipple label={handleFontChange(value === 5, "Get Involved")} component={Link} to="/getinvolved"/>
                         </Tabs>
                     </div>
