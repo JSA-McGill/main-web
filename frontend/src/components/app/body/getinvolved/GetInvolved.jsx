@@ -10,12 +10,15 @@ import FacebookIcon from '@material-ui/icons/Facebook';
 import InstagramIcon from '@material-ui/icons/Instagram';
 import IconButton from '@material-ui/core/IconButton';
 
-import "./getinvolved.scss"
-
 const useStyles = makeStyles((theme) => ({
     root: {
         display: 'block',
         width: '100vw'
+    },
+    getinvolved: {
+        justifyContent: 'center',
+        textAlign: 'left',
+        padding: '24px'
     },
     content: {
         justifyContent: 'center',
@@ -50,9 +53,9 @@ export default function GetInvolved(){
     return (
         <div className={classes.root} >
             <div className={classes.content}>
-                <div>
+                <div className={classes.getinvolved}>
                     <h1> Get Involved </h1> 
-                    <h2> Come to our events!  </h2>
+                    <p> JSA McGill is always looking for participants and volunteer through our local events! If you're interested you can find a list of our events here <a href="https://www.facebook.com/pg/jsa.mcgill/events/?ref=page_internal" target="_blank"> here </a>!</p>
                 </div>
                 <div>
                     <h1>Reach Out to Us!</h1>

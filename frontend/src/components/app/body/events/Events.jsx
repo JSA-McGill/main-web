@@ -11,6 +11,7 @@ import Typography from '@material-ui/core/Typography';
 import Slide from '@material-ui/core/Slide';
 import Fade from '@material-ui/core/Fade';
 import events from "../../../../assets/events/events.js"
+import { CardActionArea } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -38,21 +39,28 @@ export default function Events() {
             <Fade in={true} timeout={1000}>
                 <Grid item>
                     <Card raised="true" className="">
-                        <CardMedia
-                            classes={{root: classes.image}}
-                            image={process.env.PUBLIC_URL + image}
-                            title={title}
-                        />
-                        <div className="">
-                            <CardContent >
-                                <Typography component="h5" variant="h5">
-                                    {title}
-                                </Typography>
-                                <Typography variant="subtitle1" color="textSecondary">
-                                    {description}
-                                </Typography>
-                            </CardContent>
-                        </div>
+                        <CardActionArea onClick={() => {
+                                console.log("WADDUP");
+                                window.location.href = link;
+                            }
+                            } >
+                            <CardMedia
+                                classes={{root: classes.image}}
+                                image={process.env.PUBLIC_URL + image}
+                                title={title}
+                            />
+                            <div className="">
+                                
+                                <CardContent >
+                                    <Typography component="h5" variant="h5">
+                                        {title}
+                                    </Typography>
+                                    <Typography variant="subtitle1" color="textSecondary">
+                                        {description}
+                                    </Typography>
+                                </CardContent>
+                            </div>
+                        </CardActionArea>
                     </Card>
                 </Grid>
             </Fade>
